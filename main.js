@@ -20,20 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             //second loop prints the song for div
             for (let j = 99; j > 0; j--) {
-                //create p
                 let p = document.createElement("p");
-                //initialize pText
-                let pText;
-                //create p text with line from song
+    
                 if (j > 1) {
                     pText = document.createTextNode(j + " lines of code in the file, " + j + " lines of code; " + friends[i] + " strikes one out, clears it all out, " + (j - 1) + " lines of code in the file");
                 } else {
                     pText = document.createTextNode(j + " line of code in the file, " + j + " line of code; " + friends[i] + " strikes one out, clears it all out, no more lines of code in the file");
                 }
-                //put p text in p
-                p.appendChild(pText);
-                //put p in div
                 div.appendChild(p);
+                p.appendChild(pText);
             }
         };
 
